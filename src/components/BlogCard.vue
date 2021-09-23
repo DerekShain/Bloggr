@@ -6,7 +6,7 @@
           {{ blog.title }}
         </h1>
         <div class="on-hover position-absolute" style="right: 1rem; top: 1rem" v-if="account.id == blog.creatorId">
-          <i class="mdi mdi-close text-danger f-20 selectable" @click="deleteblog()"></i>
+          <i class="mdi mdi-close text-danger f-20 selectable" @click="deleteBlog()"></i>
         </div>
         <p class="description">
           Check out my profile below!
@@ -17,6 +17,9 @@
             {{ blog.creator.name }}
           </router-link>
         </p>
+        <h3 class="description selectable" :data-bs-target="'#blog-modal-' +blog.id" data-bs-toggle="modal">
+          Read more!
+        </h3>
       </div>
     </div>
   </div>
@@ -26,7 +29,7 @@
       {{ blog.title }}
     </template>
     <template #modal-body>
-      <div class="row">
+      <div class="row text-center">
         {{ blog.body }}
       </div>
     </template>

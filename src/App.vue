@@ -6,6 +6,12 @@
     <router-view />
   </main>
   <footer>
+    <div class="bg-dark text-light fixed-bottom text-center p-4">
+      <router-link :to="{ name: 'About' }" class="btn text-success lighten-30 selectable text-uppercase">
+        About
+      </router-link>
+      Made by JOSH N DEREK
+    </div>
     <div class="bg-dark text-light text-center p-4">
       <router-link :to="{ name: 'About' }" class="btn text-success lighten-30 selectable text-uppercase">
         About
