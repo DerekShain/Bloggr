@@ -53,7 +53,10 @@ export default {
       account: computed(() => AppState.account),
       async deleteBlog() {
         try {
+          const yes = await Pop.confirm('Are you sure you want to delete?')
+          if (!yes) { return }
           await blogsService.deleteBlog(props.blog.id)
+          Pop.toast('Deleted!', 'success')
         } catch (error) {
           Pop.toast(error, 'error')
         }
