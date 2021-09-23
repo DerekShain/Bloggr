@@ -1,5 +1,5 @@
 <template>
-  <div class="col-md-4 p-2">
+  <div class="col-md-3 p-4 d-flex justify-content-center">
     <div class="card m-2" :style="{ 'backgroundImage': 'url(' + blog.imgUrl + ')' }">
       <div class="info">
         <h1 class="title">
